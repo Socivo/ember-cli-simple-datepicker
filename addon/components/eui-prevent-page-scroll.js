@@ -1,6 +1,7 @@
 import Ember from 'ember';
-
+import layout from '../templates/components/eui-prevent-page-scroll';
 export default Ember.Component.extend({
+  layout,
   classNames: ['eui-pevent-page-scroll'],
   attributeBindings: ['style'],
 

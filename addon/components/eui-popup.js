@@ -2,8 +2,10 @@
 import Ember from 'ember';
 
 import '../utilities/position';
+import layout from '../templates/components/eui-popup';
 
 export default Ember.Component.extend({
+  layout,
   tagName: 'eui-popup',
   classNames: ['eui-popup'],
   attributeBindings: ['tabindex'],

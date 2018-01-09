@@ -2,13 +2,16 @@ import Ember from 'ember';
 import disabledSupport from '../mixins/disabled-support';
 import widthSupport from '../mixins/width-support';
 import errorSupport from '../mixins/error-support';
+import layout from '../templates/components/date-picker';
 import moment from 'moment';
 
-export default Ember.Component.extend(disabledSupport, errorSupport, widthSupport, {
-  classNameBindings: ['isDisabled:eui-disabled', 'class'],
-  tagName: 'date-picker',
 
-  baseClass: 'select',
+export default Ember.Component.extend(disabledSupport, errorSupport, widthSupport, {
+  layout,
+  classNameBindings: ['isDisabled:eui-disabled', 'class'],
+  tagName: 'eui-selectdate',
+
+  baseClass: 'selectdate',
   style: 'default',
   size: 'medium',
   calendarStyle: 'default',
@@ -381,5 +384,8 @@ export default Ember.Component.extend(disabledSupport, errorSupport, widthSuppor
   },
 
   // Error check should happen without user having to focus on component
-  isEntered: true
+  isEntered: true,
+  didInsertElement() {
+    console.log('Element inserted');
+  }
 });
