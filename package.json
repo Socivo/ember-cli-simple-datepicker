@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-simple-datepicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Date picker component extracted from EmberUI.",
   "keywords": [
     "ember-addon"
